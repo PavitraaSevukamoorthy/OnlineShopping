@@ -1,11 +1,19 @@
 <project>
 <target name = "copy">
-	<mkdir dir="C:\Users\home\git\OnlineShopping\build\classes"/>
-	<mkdir dir="C:\Users\home\git\OnlineShopping\tomcat"/>
-	<copy file="F:\eclipse-workspace\LogIn_SignUp\build\classes\Test\Login.class" todir="C:\Users\home\git\OnlineShopping\build\classes"/>
-	<copy file="F:\eclipse-workspace\LogIn_SignUp\build\classes\Test\Signup.class" todir="C:\Users\home\git\OnlineShopping\build\classes"/>
-	<copy todir="C:\Users\home\git\OnlineShopping\tomcat">
-	  <fileset dir="F:\pavitraa\Zoho\tomcat09\tomcat9"/>
-	</copy>
+	<copy file="F:\eclipse-workspace\LogIn_SignUp\WebContent\index.html" todir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html"/>
+	<copy file="F:\eclipse-workspace\LogIn_SignUp\WebContent\login.html" todir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html"/>
+	<copy file="F:\eclipse-workspace\LogIn_SignUp\WebContent\signup.html" todir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html"/>
 </target>
+<target name="jar">
+	        <jar destfile="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\WEB-INF\lib\Login.jar" basedir="C:\Users\home\git\OnlineShopping\build\classes">
+	            <manifest>
+	                <attribute name="Main-Class" value="Login"/>
+	            </manifest>
+	        </jar>
+    <jar destfile="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\WEB-INF\lib\Signup.jar" basedir="C:\Users\home\git\OnlineShopping\build\classes">
+        <manifest>
+            <attribute name="Main-Class" value="Signup"/>
+        </manifest>
+    </jar>
+</target>	
 </project>
