@@ -3,13 +3,26 @@
 <h3>Sign_Up Page</h3>
 <body>
 <form  action="signup">
-		<input type="hidden" value= "CUSTOMER" name="role" /><br/>
-		LastName:<input type="text" name="lastname" /><br/>
-		FirstName:<input type="text" name="firstname" /><br/>
-        Email ID:<input type="text" name="email" /><br/>
-        Password:<input type="password" name="pass" /><br/>
-        <input type="submit" value="SIGN-UP" />
+		<input type="hidden" value= "CUSTOMER" id = "role" name="role" /><br/>
+		LastName:<input type="text" id = "last_name" name="lastname" /><br/>
+		FirstName:<input type="text" id = "first_name" name="firstname" /><br/>
+        Email ID:<input type="text" id = "email_id" name="email" /><br/>
+        Password:<input type="password" id = "password"  name="pass" /><br/>
+        <button id="button">SIGN-UP</button> 
         </form>
-
+<script>
+document.getElementById('button').addEventListener('click',loadDoc);
+function loadDoc() {
+	var role = document.getElementById('role');
+	var lname = document.getElementById('last_name');
+	var fname = document.getElementById('first_name');
+  	var email = document.getElementById('email_id');
+  	var password = document.getElementById('password');
+  	const request = new XMLHttpRequest();
+  	var url = "signup?role="+role+"&lastname="+lname+"&firstname="+fname+"&email="+email+"&pass="+password;
+  	request.open("GET", url );
+  	request.send();
+}
+</script>
 </body>
 </html>

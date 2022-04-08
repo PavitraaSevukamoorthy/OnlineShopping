@@ -3,8 +3,18 @@
 <h3>Remove Manager</h3>
 <body>
 <form  action="removemanager">
-		ID:<input type="text" name="ID" /><br/>
-        <input type="submit" value="remove" />
+		ID:<input type="text" id = "id" name="ID" /><br/>
+        <button id="button">remove_manager</button>  
         </form>
+<script>
+document.getElementById('button').addEventListener('click',loadDoc);
+function loadDoc() {
+	var id = document.getElementById('id');
+  	const request = new XMLHttpRequest();
+  	var url = "removemanager?ID="+id;
+  	request.open("GET", url );
+  	request.send();
+}
+</script>
 </body>
 </html>

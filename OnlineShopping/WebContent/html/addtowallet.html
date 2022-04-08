@@ -3,8 +3,18 @@
 <h2>Add amount to wallet</h2>
 <body>
 <form action="addtowallet">
-Amount: <input type = "text" name= "amount">
-<input type = "submit" value = "Add amount">
+Amount: <input type = "text" id = "amount" name= "amount">
+<button id="button">Add amount</button> 
 </form>
+<script>
+document.getElementById('button').addEventListener('click',loadDoc);
+function loadDoc() {
+  var amount = document.getElementById('amount');
+  const request = new XMLHttpRequest();
+  var url = "addtowallet?amount="+amount;
+  request.open("GET", url );
+  request.send();
+}
+</script>
 </body>
 </html>

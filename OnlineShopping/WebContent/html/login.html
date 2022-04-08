@@ -2,10 +2,21 @@
 <html>
 <h3>Login Page</h3>
 <body>
-<form   action = "login"> 
-		Email ID:  <input type="text" name="email" /><br/>
-        Password:  <input type="password" name="pass" /><br/>
-        <input type="submit" value="LOGIN" />
+<form  action = "login"> 
+		Email ID:  <input type="text" id="email_id" name="email" /><br/>
+        Password:  <input type="password" id = "password" name="pass" /><br/>
+        <button id="button">LOGIN</button>     
 </form>
+<script>
+document.getElementById('button').addEventListener('click',loadDoc);
+function loadDoc() {
+  var email = document.getElementById('email_id');
+  var password = document.getElementById('password');
+  const request = new XMLHttpRequest();
+  var url = "login?email="+email"+&pass="password;
+  request.open("GET", url );
+  request.send();
+}
+</script>
 </body>
 </html>
