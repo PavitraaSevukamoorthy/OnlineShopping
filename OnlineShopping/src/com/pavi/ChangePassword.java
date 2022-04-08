@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/changepassword")
+//@WebServlet("/changepassword")
 public class ChangePassword extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;

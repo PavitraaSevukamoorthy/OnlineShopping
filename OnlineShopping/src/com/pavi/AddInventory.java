@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/addinventory")
+//@WebServlet("/addinventory")
 public class AddInventory extends HttpServlet {
 
 	public static Connection getconnection() {

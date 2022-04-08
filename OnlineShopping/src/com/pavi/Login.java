@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/login")
+//@WebServlet("/login")
 public class Login extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;

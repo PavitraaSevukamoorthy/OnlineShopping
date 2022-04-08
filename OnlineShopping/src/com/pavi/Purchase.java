@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/purchase")
+//@WebServlet("/purchase")
 public class Purchase extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/remove")
+//@WebServlet("/removeinventory")
 public class RemoveInventory extends HttpServlet implements Servlet {
 	public static Connection getconnection() {
 		Connection conn = null;

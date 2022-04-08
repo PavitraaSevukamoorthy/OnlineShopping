@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/signup")
+//@WebServlet("/signup")
 
 public class Signup extends HttpServlet {
 	String role, FN,LN,UN,Password;

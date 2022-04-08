@@ -41,7 +41,7 @@ public class Inventory extends HttpServlet {
 				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("Quantity")+"</td>"+"<td>"+rs.getString("Created_by")+"</td>"+"<td>"+rs.getString("Created_Date_Time")+"</td></tr>");
 				 }
 			 out.println("</table>");  
-			 out.println("<form action = \"remove\">");
+			 out.println("<form action = \"removeinventory\">");
 			 out.println("ProductID:  <input type=\"text\" name=\"productid\" />");
 			 out.println( "<input type=\"submit\"  value=\"Remove\">");
              out.println("</form></body></html>");  

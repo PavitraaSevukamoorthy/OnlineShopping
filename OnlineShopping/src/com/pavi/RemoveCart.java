@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/removefromcart")
+//@WebServlet("/removefromcart")
 public class RemoveCart extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;

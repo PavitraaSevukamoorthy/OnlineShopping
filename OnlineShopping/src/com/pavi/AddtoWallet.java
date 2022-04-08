@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/addtowallet")
+//@WebServlet("/addtowallet")
 public class AddtoWallet extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;
