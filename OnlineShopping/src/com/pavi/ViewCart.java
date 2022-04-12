@@ -38,16 +38,9 @@ public class ViewCart extends HttpServlet {
 	         out.println("<table>");
 	         out.println("<tr><th>ProductID</th><th>ProductName</th><th>ProductDescription<th>Price</th><th>REQ_Quantity</th><th>Amount_to_be_paid</th></tr>");  
 			 while(rs.next()) {
-				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("REQ_Quantity")+"</td>"+"<td>"+rs.getInt("Amount_to_be_paid") +"</td></tr>");
+				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("REQ_Quantity")+"</td>"+"<td>"+rs.getInt("Amount_to_be_paid")+"</td>"+"<td><a href =removefromcart?productid="+rs.getInt("ProductID")+">Remove from cart</a></td>"+"<td><a href =purchase?productid="+rs.getInt("ProductID")+">  Purchase</a>" +"</td></tr>");
 				 }
-			 out.println("</table>");
-			 out.println("<form action = \"removefromcart\">");
-			 out.println("ProductID:  <input type=\"text\" name=\"productid\" />");
-			 out.println( "<input type=\"submit\"  value=\"Remove Product\"></form>");
-			 out.println("<form action = \"purchase\">");
-			 out.println("ProductID:  <input type=\"text\" name=\"productid\" />");
-			 out.println( "<input type=\"submit\"  value=\"Purchase Product\">");
-			 out.println("</form></body></html>");  
+			 out.println("</body></html>");  
 			 conn.close(); 
 		}catch (Exception e){ System.out.println(e);}
 		

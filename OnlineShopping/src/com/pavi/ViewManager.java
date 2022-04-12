@@ -37,13 +37,16 @@ public class ViewManager extends HttpServlet {
 	         ResultSet rs= stmt.executeQuery();
 	         out.println("<html>");  
 	         out.println("<body>");
-	         out.println("<table>");
+	         out.println("<table id = 'viewmanager'>");
 	         out.println("<tr><th>User_ID</th><th>Functionality</th><th>Lastname</th><th>Firstname</th></tr>");  
 	         while(rs.next()) {
 				 out.println("<tr>"+"<td>"+rs.getString("User_ID")+"</td>"+"<td>"+rs.getString("Functionality")+"</td>"+"<td>"+rs.getString("Lastname")+"</td>"+"<td>"+rs.getString("Firstname")+"</td></tr>");
 				 }
 	         out.println("</table>");
+	         out.println("<button id = 'gbutton' onclick = 'goback()'> GoBack </button><br>");
+	         out.println("<script src= './js/admin.js'></script>");
 	         out.println("</body></html>");
+	         out.close();
 	         conn.close();
 	}catch (Exception e){ System.out.println(e);}
 

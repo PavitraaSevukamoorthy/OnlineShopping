@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-<h2>ADMIN</h2>
-<body>
-<form>
-<a href = "changepassword.html"> Change password<br>
-</a>
-<a href = "createmanager.html"> Create Manager<br>
-</a>
-<a href = "ViewManager"> View Managers<br>
-</a> 
-<a href = "removemanager.html"> Remove Manager<br>
-</a>
-<a href = "addinventory.html"> Add Products to Inventory<br>
-</a>
-<a href = "Inventory"> View Inventory<br>
-</a>
-<a href = "Logout"> LogOut<br>
-</a>
 
+<body>
+<form id = "admin">
+<h2>ADMIN</h2>
+<button id = "button" onclick = "changepasspage()"> Change_Password </button><br>
+
+<button id = "button" onclick = "createmanagerpage()"> Create_Manager </button><br>
+
+<button id = "button" onclick = "viewmanager()"> View Managers </button><br>
+
+<button id = "button" onclick = "removemanagerpage()"> Remove Manager </button><br>
+
+<button id = "button" onclick = "addiventorypage()"> Add Products to Inventory </button><br>
+
+<button id = "button" onclick = "inventory()">  View Inventory </button><br>
+
+<button id = "button" onclick = "logout()"> LogOut  </button><br>
+
+<script src="./js/admin.js"></script>
 </form>
 </body>
 </html>

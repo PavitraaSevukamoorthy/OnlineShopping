@@ -42,6 +42,7 @@ public class ChangePassword extends HttpServlet {
 				st.executeUpdate();
 				PrintWriter out = response.getWriter();
 				out.println("Password updated Successfully");
+				out.close();
 				conn.close();
 		 }catch (Exception e){ System.out.println(e);}
 	}

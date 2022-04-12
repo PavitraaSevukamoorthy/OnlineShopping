@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<h3>ADD Products to Inventory</h3>
+<h3 id = "head">ADD Products to Inventory</h3>
 <body>
-<table>
+<table id = "add inventory">
   <tr>
     <th>ProductID</th>
     <th>ProductName</th>
@@ -17,23 +17,9 @@
 <td> <input type="text" id = "pd" name="product_des" /></td>
 <td><input type="text" id = "price" name="price" /></td>
 <td><input type="text" id = "quantity" name="quantity" /><br/></td>
-<button id="button">ADD</button> 
+<button id = "abutton" onclick = "addinventory()">ADD</button> 
 </form>
 </tr>
 </table>
-<script>
-document.getElementById('button').addEventListener('click',loadDoc);
-function loadDoc() {
-	var pid = document.getElementById('pid');
-	var pname = document.getElementById('pn');
-	var pdes = document.getElementById('pd');
-  	var price = document.getElementById('price');
-  	var quant = document.getElementById('quantity');
-  	const request = new XMLHttpRequest();
-  	var url = "addinventory?product_id="+pid+"&product_name="+pname+"&product_des="+pdes+"&price="+price+"&quantity="+quant;
-  	request.open("GET", url );
-  	request.send();
-}
-</script>
 </body>
 </html>

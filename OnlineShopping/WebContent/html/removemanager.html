@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
-<h3>Remove Manager</h3>
 <body>
-<form  action="removemanager">
+<form  id ="removemanager">
+<h3>Remove Manager</h3>
 		ID:<input type="text" id = "id" name="ID" /><br/>
-        <button id="button">remove_manager</button>  
+        <button id="button" onclick = "removemanager()">Remove_Manager</button>  
         </form>
 <script>
-document.getElementById('button').addEventListener('click',loadDoc);
-function loadDoc() {
-	var id = document.getElementById('id');
-  	const request = new XMLHttpRequest();
-  	var url = "removemanager?ID="+id;
-  	request.open("GET", url );
-  	request.send();
-}
+
 </script>
 </body>
 </html>
