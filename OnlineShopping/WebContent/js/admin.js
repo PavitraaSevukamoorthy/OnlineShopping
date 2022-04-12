@@ -129,7 +129,6 @@ function addiventorypage(){
 	request.open("GET",url);
 	request.send();
 }
-
 function addinventory(){
 	event.preventDefault();
 	var pid = document.getElementById('pid').value;
