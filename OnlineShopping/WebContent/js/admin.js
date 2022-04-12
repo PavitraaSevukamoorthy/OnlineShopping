@@ -143,6 +143,8 @@ function addinventory(){
 		if(this.readyState == 4 && this.status==200){
 			window.alert("Products were added to the Inventory ");
 			document.getElementById('abutton').remove();
+			document.getElementById('add_inventory').remove();
+			document.getElementById('add_inventory_table').remove();
 			document.getElementById('head').remove();
 			admin();
 		}
@@ -160,11 +162,27 @@ function removeproduct(a){
   	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			window.alert("Product was removed from Inventory ");
+			innventory();
 		}
 	}
   	request.open("GET", url );
   	request.send();
 }
+function innventory(){
+	event.preventDefault();
+	document.getElementById("inventory").remove();
+	document.getElementById("ibutton").remove();
+	const request = new XMLHttpRequest();
+	const url = window.location.pathname + "Inventory";
+	request.onreadystatechange = function (){
+		if(this.readyState == 4 && this.status==200){
+			document.write(this.response);
+		}
+	}
+	request.open("GET",url);
+	request.send();
+}
+
 function inventory(){
 	event.preventDefault();
 	document.getElementById('admin').remove();
