@@ -24,15 +24,16 @@ function login_validate(){
 			if (msg == 1){
 				admin() ; 	    
 			}
-			if (msg == 2){
+			else if (msg == 2){
 				manager();
 			}
-			if (msg == 3){
+			else if (msg == 3){
 				customer();
 			}
+			else {window.alert(msg+"Username or Password entered is wrong")}
 		}
 	}
-	request.open("GET", url, false );
+	request.open("GET", url);
 	request.send();
 }
 

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Products")
+//@WebServlet("/Products")
 public class Products extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;
@@ -33,18 +33,22 @@ public class Products extends HttpServlet {
 	         ResultSet rs= stmt.executeQuery();
 	         out.println("<html>");  
 	         out.println("<body>");
-	         out.println("<table>");
+	         out.println("<table id = 'products'>");
             out.println("<tr><th>ProductID</th><th>ProductName</th><th>ProductDescription<th>Price</th><th>Quantity</th></tr>");  
 			 while(rs.next()) {
 				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("Quantity")+"</td></tr>");
 				 }
 			 out.println("</table>");
-			 out.println("<form action = \"addtocart\">");
-			 out.println("ProductID:  <input type=\"text\" name=\"productid\" />");
-			 out.println("Required Quantity:  <input type=\"text\" name=\"req\" />");
-			 out.println( "<input type=\"submit\"  value=\"Add to Cart\">");
-             out.println("</form></body></html>");  
+			 out.println("<form id = \"addtocart\">");
+			 out.println("ProductID:  <input type=\"text\" id = 'productid' name=\"productid\" />");
+			 out.println("Required Quantity:  <input type=\"text\" id = 'req' name=\"req\" />");
+			 out.println("</form>");
+			 out.println( "<button id = 'button' onclick = 'addtocart(document.getElementById(\"productid\").value, document.getElementById(\"req\").value)'> Add to Cart </button></br>");
+			 out.println("<button id = 'gbutton' onclick = 'goback()'> GoBack </button><br>");
+			 out.println("<script src=\"./js/customer.js\"></script>");
+             out.println("</body></html>");  
              conn.close(); 
+             out.close();
 		}catch (Exception e){ System.out.println(e);}
 	}
 

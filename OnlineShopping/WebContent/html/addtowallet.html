@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html>
-<h2>Add amount to wallet</h2>
 <body>
-<form action="addtowallet">
+<form id ="addtowallet">
+<h2>Add amount to wallet</h2>
 Amount: <input type = "text" id = "amount" name= "amount">
-<button id="button">Add amount</button> 
+<button id="button" onclick = "addtowallet()">Add amount</button> 
 </form>
-<script>
-document.getElementById('button').addEventListener('click',loadDoc);
-function loadDoc() {
-  var amount = document.getElementById('amount');
-  const request = new XMLHttpRequest();
-  var url = "addtowallet?amount="+amount;
-  request.open("GET", url );
-  request.send();
-}
-</script>
+<script src="./js/customer.js"></script>
 </body>
 </html>

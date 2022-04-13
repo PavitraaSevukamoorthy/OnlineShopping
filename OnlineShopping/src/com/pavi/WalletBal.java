@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/WalletBal")
+//@WebServlet("/WalletBal")
 public class WalletBal extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,7 +25,8 @@ public class WalletBal extends HttpServlet {
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()){
 				PrintWriter out = response.getWriter();
-				out.println("Wallet balance is " + rs.getDouble("wallet_amount"));}
+				out.println("Wallet balance is " + Double.toString(rs.getDouble("wallet_amount")));
+				out.close();}
 				conn.close();
 			}catch(Exception e){ System.out.println(e);}
 	}

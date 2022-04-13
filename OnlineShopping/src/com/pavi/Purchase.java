@@ -53,6 +53,7 @@ public class Purchase extends HttpServlet {
 				PrintWriter out = response.getWriter();
 				out.println( rs.getString("ProductName")+" is purchased and the balance amount in the wallet is " + a);
 				conn.close();
+				out.close();
 			}
 		}catch (Exception e){ System.out.println(e);}
 	}

@@ -37,7 +37,8 @@ public class AddtoWallet extends HttpServlet {
 			st.setDouble(1, add);
 			st.execute();
 			PrintWriter out = response.getWriter();
-			out.println("Amount successful added to wallet");
+			out.println("Amount successfully added to wallet");
+			out.close();
 			conn.close();
 		} catch(Exception e){ System.out.println(e);}
 	}

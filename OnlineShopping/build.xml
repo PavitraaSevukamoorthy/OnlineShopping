@@ -1,19 +1,28 @@
 <project>
 <target name = "copy">
-	<copy file="F:\eclipse-workspace\LogIn_SignUp\WebContent\index.html" todir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html"/>
-	<copy file="F:\eclipse-workspace\LogIn_SignUp\WebContent\login.html" todir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html"/>
-	<copy file="F:\eclipse-workspace\LogIn_SignUp\WebContent\signup.html" todir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html"/>
+	<copy todir="F:\pavitraa\Zoho\TOMCAT\tomcat">
+		  <fileset dir="F:\pavitraa\Zoho\tomcat09\tomcat9">
+		   </fileset>
+		</copy>
+	
+	<mkdir dir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\html"/>
+	<copy todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\html">
+	  <fileset dir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html">
+	   </fileset>
+	</copy>
+	
+	<mkdir dir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\admin.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\load.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\customer.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\manager.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
+	
+	<mkdir dir="F:\pavitraa\Zoho\TOMCAT\tomcat\build\class"/>
+		<copy todir="F:\pavitraa\Zoho\TOMCAT\tomcat\build\class">
+			  <fileset dir="C:\Users\home\git\OnlineShopping\OnlineShopping\build\classes\com\pavi">
+			   </fileset>
+			</copy>
 </target>
-<target name="jar">
-	        <jar destfile="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\WEB-INF\lib\Login.jar" basedir="C:\Users\home\git\OnlineShopping\build\classes">
-	            <manifest>
-	                <attribute name="Main-Class" value="Login"/>
-	            </manifest>
-	        </jar>
-    <jar destfile="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\WEB-INF\lib\Signup.jar" basedir="C:\Users\home\git\OnlineShopping\build\classes">
-        <manifest>
-            <attribute name="Main-Class" value="Signup"/>
-        </manifest>
-    </jar>
-</target>	
+	<target name="jar"></target>
+	<jar destfile="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\WEB-INF\lib\OnlineShopping.jar" basedir="C:\Users\home\git\OnlineShopping\OnlineShopping\build\classes\com\pavi"/>
 </project>

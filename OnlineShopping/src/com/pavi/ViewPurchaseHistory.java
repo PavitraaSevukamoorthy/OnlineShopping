@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/ViewPurchaseHistory")
+//@WebServlet("/ViewPurchaseHistory")
 public class ViewPurchaseHistory extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;
@@ -35,14 +35,17 @@ public class ViewPurchaseHistory extends HttpServlet {
 	        PrintWriter out = response.getWriter();  
 			out.println("<html>");  
 	        out.println("<body>");
-	        out.println("<table>");
+	        out.println("<table id = 'ph'>");
 	        out.println("<tr><th>ProductID</th><th>ProductName</th><th>ProductDescription<th>Price</th><th>REQ_Quantity</th><th>Amount_paid</th></tr>");
 	        while(rs.next()) {
 				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("REQ_Quantity")+"</td>"+"<td>"+rs.getInt("Amount_paid") +"</td></tr>");
 				 }
 			 out.println("</table>");
+			 out.println("<button id = 'button' onclick = 'goooback()'> GoBack </button><br>");
+			 out.println("<script src= './js/customer.js'></script>");
 			 out.println("</body></html>");  
 			 conn.close(); 
+			 out.close();
 		}catch(Exception e){ System.out.println(e);}
 	}
 

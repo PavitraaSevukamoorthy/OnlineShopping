@@ -64,7 +64,6 @@ public class Login extends HttpServlet {
 						HttpSession session = request.getSession();
 						session.setAttribute("Functionality", rs.getString("Functionality"));
 						session.setAttribute("Username", email);
-						response.sendRedirect("Customer.html");
 						PrintWriter out = response.getWriter();
 						out.println("3");
 						out.close();

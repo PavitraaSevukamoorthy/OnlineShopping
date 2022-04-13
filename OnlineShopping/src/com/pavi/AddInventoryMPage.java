@@ -11,18 +11,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet("/CustomerPage")
-public class CustomerPage extends HttpServlet {
-	
+//@WebServlet("/AddInventoryMPage")
+public class AddInventoryMPage extends HttpServlet {
+
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		StringBuilder html = new StringBuilder();
-        FileReader fr = new FileReader("C:\\Users\\home\\git\\OnlineShopping\\OnlineShopping\\WebContent\\html\\Customer.html");
-        try {
-            BufferedReader br = new BufferedReader(fr);
- 
-            String val;
- 
+		StringBuilder html = new StringBuilder ();
+		FileReader fr = new FileReader ("C:\\Users\\home\\git\\OnlineShopping\\OnlineShopping\\WebContent\\html\\addinventorymanager.html");
+		try {
+			BufferedReader br = new BufferedReader(fr);
+			String val;
+			 
             while ((val = br.readLine()) != null) {
                 html.append(val);
             }
@@ -32,10 +31,10 @@ public class CustomerPage extends HttpServlet {
             out.println(result);
 
             br.close();
-        }
- 
-        catch (Exception ex) {
+		}
+		catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
 	}
+
 }

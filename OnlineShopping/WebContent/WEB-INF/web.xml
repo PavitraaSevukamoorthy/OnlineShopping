@@ -53,6 +53,22 @@
     <url-pattern>/changepasswordpage</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>changepasswordmanagerpage</servlet-name>
+    <servlet-class>com.pavi.ChangePasswordManagerPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>changepasswordmanagerpage</servlet-name>
+    <url-pattern>/changepasswordmanagerpage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>changepasswordcustomerpage</servlet-name>
+    <servlet-class>com.pavi.ChangePasswordCustomerPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>changepasswordcustomerpage</servlet-name>
+    <url-pattern>/changepasswordcustomerpage</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>createmanagerpage</servlet-name>
     <servlet-class>com.pavi.CreateManagerPage</servlet-class>
   </servlet>
@@ -76,7 +92,7 @@
     <servlet-name>removemanagerpage</servlet-name>
     <url-pattern>/removemanagerpage</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>addinventorypage</servlet-name>
     <servlet-class>com.pavi.AddInventoryPage</servlet-class>
   </servlet>
@@ -84,7 +100,30 @@
     <servlet-name>addinventorypage</servlet-name>
     <url-pattern>/addinventorypage</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <servlet-name>addinventorympage</servlet-name>
+    <servlet-class>com.pavi.AddInventoryMPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addinventorympage</servlet-name>
+    <url-pattern>/addinventorympage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Inventory</servlet-name>
+    <servlet-class>com.pavi.Inventory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Inventory</servlet-name>
+    <url-pattern>/Inventory</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InnventoryM</servlet-name>
+    <servlet-class>com.pavi.InnventoryM</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InnventoryM</servlet-name>
+    <url-pattern>/InnventoryM</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>signup</servlet-name>
     <servlet-class>com.pavi.Signup</servlet-class>
@@ -126,6 +165,22 @@
     <url-pattern>/addtowallet</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>addtocart</servlet-name>
+    <servlet-class>com.pavi.AddtoCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addtocart</servlet-name>
+    <url-pattern>/addtocart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>viewcart</servlet-name>
+    <servlet-class>com.pavi.ViewCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewcart</servlet-name>
+    <url-pattern>/viewcart</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>removeinventory</servlet-name>
     <servlet-class>com.pavi.RemoveInventory</servlet-class>
   </servlet>
@@ -142,11 +197,44 @@
     <url-pattern>/removefromcart</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>products</servlet-name>
+    <servlet-class>com.pavi.Products</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>products</servlet-name>
+    <url-pattern>/products</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>purchase</servlet-name>
     <servlet-class>com.pavi.Purchase</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>purchase</servlet-name>
     <url-pattern>/purchase</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ViewPurchaseHistory</servlet-name>
+    <servlet-class>com.pavi.ViewPurchaseHistory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewPurchaseHistory</servlet-name>
+    <url-pattern>/ViewPurchaseHistory</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>WalletBal</servlet-name>
+    <servlet-class>com.pavi.WalletBal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WalletBal</servlet-name>
+    <url-pattern>/WalletBal</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>WalletPage</servlet-name>
+    <servlet-class>com.pavi.WalletPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WalletPage</servlet-name>
+    <url-pattern>/WalletPage</url-pattern>
   </servlet-mapping>
 </web-app>

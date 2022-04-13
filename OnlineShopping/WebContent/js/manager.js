@@ -1,8 +1,8 @@
-function changepasspage(){
+function changepassmanagerpage(){
 	event.preventDefault();
-	document.getElementById('admin').remove();
+	document.getElementById('manager').remove();
 	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "changepasswordpage";
+	const url = window.location.pathname + "changepasswordmanagerpage";
 	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			document.write(this.response);
@@ -13,7 +13,7 @@ function changepasspage(){
 }
 
 
-function changepassword() {
+function changepasswordmanager() {
 	event.preventDefault();
 	var password = document.getElementById('password').value;
 	const request = new XMLHttpRequest();
@@ -21,8 +21,8 @@ function changepassword() {
 	request.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			window.alert("Password updated Successfully");
-			document.getElementById("changepassword").remove();
-			admin();
+			document.getElementById("changepasswordmanager").remove();
+			manager();
 		}
 	}
   request.open("GET", url );
@@ -30,11 +30,11 @@ function changepassword() {
 }
 
 
-function createmanagerpage(){
+function addiventorympage(){
 	event.preventDefault();
-	document.getElementById('admin').remove();
+	document.getElementById('manager').remove();
 	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "createmanagerpage";
+	const url = window.location.pathname + "addinventorympage";
 	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			document.write(this.response);
@@ -45,92 +45,7 @@ function createmanagerpage(){
 }
 
 
-function createmanager() {
-	event.preventDefault();
-	var role = document.getElementById('role').value;
-	var lname = document.getElementById('last_name').value;
-	var fname = document.getElementById('first_name').value;
-  	var email = document.getElementById('email_id').value;
-  	var password = document.getElementById('password').value;
-  	const request = new XMLHttpRequest();
-  	var url = window.location.pathname + "createmanager?role="+role+"&lastname="+lname+"&firstname="+fname+"&email="+email+"&pass="+password;
-  	request.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			window.alert("Manager Creation was Successful");
-			document.getElementById('createmanager').remove();
-			admin();
-		}
-	}
-  	request.open("GET", url );
-  	request.send();
-}
-
-function viewmanager(){
-	event.preventDefault();
-	document.getElementById('admin').remove();
-	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "ViewManager";
-	request.onreadystatechange = function (){
-		if(this.readyState == 4 && this.status==200){
-			document.write(this.response);
-		}
-	}
-	request.open("GET",url);
-	request.send();
-}
-
-function goback(){
-	event.preventDefault();
-	document.getElementById("viewmanager").remove();
-	document.getElementById("gbutton").remove();
-	admin();
-
-}
-
-function removemanagerpage(){
-	event.preventDefault();
-	document.getElementById('admin').remove();
-	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "removemanagerpage";
-	request.onreadystatechange = function (){
-		if(this.readyState == 4 && this.status==200){
-			document.write(this.response);
-		}
-	}
-	request.open("GET",url);
-	request.send();
-}
-
-function removemanager(){
-	event.preventDefault();	
-	var id = document.getElementById('id').value;
-	const request = new XMLHttpRequest();
-	var url = window.location.pathname + "removemanager?ID="+id;
-	request.onreadystatechange = function (){
-			if(this.readyState == 4 && this.status==200){
-				window.alert("Manager removed Successfully");
-				document.getElementById('removemanager').remove();
-				admin();
-			}
-		}
-	  	request.open("GET", url );
-	  	request.send();
-}
-
-function addiventorypage(){
-	event.preventDefault();
-	document.getElementById('admin').remove();
-	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "addinventorypage";
-	request.onreadystatechange = function (){
-		if(this.readyState == 4 && this.status==200){
-			document.write(this.response);
-		}
-	}
-	request.open("GET",url);
-	request.send();
-}
-function addinventory(){
+function addinventorymanager(){
 	event.preventDefault();
 	var pid = document.getElementById('pid').value;
 	var pname = document.getElementById('pn').value;
@@ -141,17 +56,18 @@ function addinventory(){
   	var url = window.location.pathname + "addinventory?product_id="+pid+"&product_name="+pname+"&product_des="+pdes+"&price="+price+"&quantity="+quant;
   	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
-			window.alert("Product was successfully added to the Inventory ");
+			window.alert("Product was successfully added to the Inventory");
 			document.getElementById('abutton').remove();
 			document.getElementById('add_inventory').remove();
 			document.getElementById('add_inventory_table').remove();
 			document.getElementById('head').remove();
-			admin();
+			manager();
 		}
 	}
   	request.open("GET", url );
   	request.send();
 }
+
 
 function removeproduct(a){
 	event.preventDefault();
@@ -167,12 +83,14 @@ function removeproduct(a){
   	request.open("GET", url );
   	request.send();
 }
+
+
 function innventory(){
 	event.preventDefault();
 	document.getElementById("inventory").remove();
 	document.getElementById("ibutton").remove();
 	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "Inventory";
+	const url = window.location.pathname + "InnventoryM";
 	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			document.write(this.response);
@@ -184,10 +102,10 @@ function innventory(){
 
 function inventory(){
 	event.preventDefault();
-	document.getElementById('admin').remove();
+	document.getElementById('manager').remove();
 	event.preventDefault();
 	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "Inventory";
+	const url = window.location.pathname + "InnventoryM";
 	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			document.write(this.response);
@@ -201,12 +119,13 @@ function gooback(){
 	event.preventDefault();
 	document.getElementById("inventory").remove();
 	document.getElementById("ibutton").remove();
-	admin();
+	manager();
 
 }
 
+
 function logout(){
-	document.getElementById('admin').remove();
+	document.getElementById('manager').remove();
 	event.preventDefault();
 	const request = new XMLHttpRequest();
 	const url = window.location.pathname + "Logout";
@@ -219,10 +138,10 @@ function logout(){
 	request.send();
 }
 
-function admin(){
+function manager(){
 	event.preventDefault();
 	const request = new XMLHttpRequest();
-	const url = window.location.pathname + "adminpage";
+	const url = window.location.pathname + "managerpage";
 	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			document.write(this.response);

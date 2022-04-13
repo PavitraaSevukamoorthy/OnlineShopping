@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ViewCart")
+//@WebServlet("/ViewCart")
 public class ViewCart extends HttpServlet {
 	
 	public static Connection getconnection() {
@@ -35,13 +35,17 @@ public class ViewCart extends HttpServlet {
 	         ResultSet rs= stmt.executeQuery();
 	         out.println("<html>");  
 	         out.println("<body>");
-	         out.println("<table>");
+	         out.println("<table id = 'cart'>");
 	         out.println("<tr><th>ProductID</th><th>ProductName</th><th>ProductDescription<th>Price</th><th>REQ_Quantity</th><th>Amount_to_be_paid</th></tr>");  
 			 while(rs.next()) {
-				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("REQ_Quantity")+"</td>"+"<td>"+rs.getInt("Amount_to_be_paid")+"</td>"+"<td><a href =removefromcart?productid="+rs.getInt("ProductID")+">Remove from cart</a></td>"+"<td><a href =purchase?productid="+rs.getInt("ProductID")+">  Purchase</a>" +"</td></tr>");
+				 out.println("<tr><td>"+rs.getInt("ProductID")+"</td>"+"<td>"+rs.getString("ProductName")+"</td>"+"<td>"+rs.getString("ProductDescription")+"</td>"+"<td>"+rs.getDouble("Price")+"</td>"+"<td>"+rs.getInt("REQ_Quantity")+"</td>"+"<td>"+rs.getInt("Amount_to_be_paid")+"</td>"+"<td><button id = 'removecart' onclick = 'removecart("+rs.getInt("ProductID")+")'> Remove </button></td>"+"<td><button id = 'purchase' onclick = 'purchase("+rs.getInt("ProductID")+")'> Purchase </button></td>"+"</tr>");
 				 }
+			 out.println("</table>");
+			 out.println("<button id = 'ibutton' onclick = 'gooback()'> GoBack </button><br>");
+			 out.println("<script src= './js/customer.js'></script>");
 			 out.println("</body></html>");  
 			 conn.close(); 
+			 out.close();
 		}catch (Exception e){ System.out.println(e);}
 		
 	}
