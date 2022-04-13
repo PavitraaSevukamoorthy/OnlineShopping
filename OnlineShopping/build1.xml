@@ -1,0 +1,5 @@
+<project>
+<target name = "copy">
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\WEB-INF\web.xml" todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\WEB-INF"/>
+</target>
+</project>
