@@ -124,6 +124,15 @@
     <servlet-name>InnventoryM</servlet-name>
     <url-pattern>/InnventoryM</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>signuppage</servlet-name>
+    <servlet-class>com.pavi.Signuppage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>signuppage</servlet-name>
+    <url-pattern>/signuppage</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>signup</servlet-name>
     <servlet-class>com.pavi.Signup</servlet-class>
@@ -220,7 +229,6 @@
     <servlet-name>ViewPurchaseHistory</servlet-name>
     <url-pattern>/ViewPurchaseHistory</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>WalletBal</servlet-name>
     <servlet-class>com.pavi.WalletBal</servlet-class>

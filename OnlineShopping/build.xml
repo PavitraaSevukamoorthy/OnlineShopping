@@ -1,28 +1,30 @@
 <project>
 <target name = "copy">
-	<copy todir="F:\pavitraa\Zoho\TOMCAT\tomcat">
-		  <fileset dir="F:\pavitraa\Zoho\tomcat09\tomcat9">
+	<copy todir="F:\pavitraa\Zoho\onlineshopping\tomcat">
+		  <fileset dir="C:\Program Files\Apache Software Foundation\Tomcat 9.0">
 		   </fileset>
 		</copy>
 	
-	<mkdir dir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\html"/>
-	<copy todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\html">
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\WEB-INF\web.xml" todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\WEB-INF"/>
+
+	<mkdir dir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\html"/>
+	<copy todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\html">
 	  <fileset dir="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\html">
 	   </fileset>
 	</copy>
 	
-	<mkdir dir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
-	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\admin.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
-	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\load.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
-	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\customer.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
-	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\manager.js" todir="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\js"/>
+	<mkdir dir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\admin.js" todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\load.js" todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\customer.js" todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\js"/>
+	<copy file="C:\Users\home\git\OnlineShopping\OnlineShopping\WebContent\js\manager.js" todir="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\js"/>
 	
-	<mkdir dir="F:\pavitraa\Zoho\TOMCAT\tomcat\build\class"/>
-		<copy todir="F:\pavitraa\Zoho\TOMCAT\tomcat\build\class">
+	<mkdir dir="F:\pavitraa\Zoho\onlineshopping\tomcat\build\class"/>
+		<copy todir="F:\pavitraa\Zoho\onlineshopping\tomcat\build\class">
 			  <fileset dir="C:\Users\home\git\OnlineShopping\OnlineShopping\build\classes\com\pavi">
 			   </fileset>
 			</copy>
 </target>
 	<target name="jar"></target>
-	<jar destfile="F:\pavitraa\Zoho\TOMCAT\tomcat\webapps\WEB-INF\lib\OnlineShopping.jar" basedir="C:\Users\home\git\OnlineShopping\OnlineShopping\build\classes\com\pavi"/>
+	<jar destfile="F:\pavitraa\Zoho\onlineshopping\tomcat\webapps\ROOT\WEB-INF\lib\OnlineShopping.jar" basedir="C:\Users\home\git\OnlineShopping\OnlineShopping\build\classes\com\pavi"/>
 </project>

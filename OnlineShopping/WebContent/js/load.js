@@ -78,3 +78,35 @@ function customer(){
 	request.open("GET",url);
 	request.send();
 }
+
+function signuppage(){
+	event.preventDefault();
+	const request = new XMLHttpRequest();
+	const url = window.location.pathname + "signuppage";
+	request.onreadystatechange = function (){
+		if(this.readyState == 4 && this.status==200){
+			document.write(this.response);
+		}
+	}
+	request.open("GET",url);
+	request.send();
+}
+
+function signup(){
+	event.preventDefault();
+	var role = document.getElementById('role').value;
+	var lname = document.getElementById('last_name').value;
+	var fname = document.getElementById('first_name').value;
+  	var email = document.getElementById('email_id').value;
+  	var password = document.getElementById('password').value;
+  	const request = new XMLHttpRequest();
+  	var url = window.location.pathname + "signup?role="+role+"&lastname="+lname+"&firstname="+fname+"&email="+email+"&pass="+password;
+  	request.onreadystatechange = function (){
+		if(this.readyState == 4 && this.status==200){
+			window.alert("Sign-up Successful");
+			window.location.replace(window.location.pathname);
+		}
+	}
+  	request.open("GET", url );
+  	request.send();
+}
