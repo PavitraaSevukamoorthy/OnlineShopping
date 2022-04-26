@@ -20,6 +20,15 @@
     <servlet-name>loginpage</servlet-name>
     <url-pattern>/loginpage</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>indexpage</servlet-name>
+    <servlet-class>com.pavi.Indexpage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>indexpage</servlet-name>
+    <url-pattern>/indexpage</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>adminpage</servlet-name>
     <servlet-class>com.pavi.AdminPage</servlet-class>
@@ -124,8 +133,7 @@
     <servlet-name>InnventoryM</servlet-name>
     <url-pattern>/InnventoryM</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>signuppage</servlet-name>
     <servlet-class>com.pavi.Signuppage</servlet-class>
   </servlet>

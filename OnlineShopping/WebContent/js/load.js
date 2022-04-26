@@ -104,9 +104,23 @@ function signup(){
   	request.onreadystatechange = function (){
 		if(this.readyState == 4 && this.status==200){
 			window.alert("Sign-up Successful");
-			window.location.replace(window.location.pathname);
+			document.getElementById("signup").remove();
+			index();
 		}
 	}
   	request.open("GET", url );
   	request.send();
+}
+
+function index(){
+	event.preventDefault();
+	const request = new XMLHttpRequest();
+	const url = window.location.pathname + "indexpage";
+	request.onreadystatechange = function (){
+		if(this.readyState == 4 && this.status==200){
+			document.write(this.response);
+			}
+		}
+	request.open("GET",url);
+	request.send();
 }
