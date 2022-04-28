@@ -1,9 +1,11 @@
 package com.pavi;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,9 +16,8 @@ public class LoginPage extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		
-        StringBuilder html = new StringBuilder();
-        FileReader fr = new FileReader("C:\\Users\\home\\git\\OnlineShopping\\OnlineShopping\\WebContent\\html\\login.html");
+		StringBuilder html = new StringBuilder();
+        FileReader fr = new FileReader("C:/Users/home/git/OnlineShopping/OnlineShopping/WebContent/html/login.html");
         try {
             BufferedReader br = new BufferedReader(fr);
  
@@ -36,7 +37,6 @@ public class LoginPage extends HttpServlet {
         catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-    }
-	
+    }	
 }
 

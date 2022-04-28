@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ListManager
  */
-@WebServlet("/ViewManager")
+//@WebServlet("/ViewManager")
 public class ViewManager extends HttpServlet {
 	public static Connection getconnection() {
 		Connection conn = null;

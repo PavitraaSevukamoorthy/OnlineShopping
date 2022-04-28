@@ -20,7 +20,6 @@
     <servlet-name>loginpage</servlet-name>
     <url-pattern>/loginpage</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <servlet-name>indexpage</servlet-name>
     <servlet-class>com.pavi.Indexpage</servlet-class>
@@ -100,6 +99,14 @@
   <servlet-mapping>
     <servlet-name>removemanagerpage</servlet-name>
     <url-pattern>/removemanagerpage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ViewManager</servlet-name>
+    <servlet-class>com.pavi.ViewManager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewManager</servlet-name>
+    <url-pattern>/ViewManager</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>addinventorypage</servlet-name>
@@ -253,4 +260,289 @@
     <servlet-name>WalletPage</servlet-name>
     <url-pattern>/WalletPage</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>adminfiltera</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfiltera</filter-name>
+    <url-pattern>/ViewManager</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterb</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterb</filter-name>
+    <url-pattern>/addinventory</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterc</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterc</filter-name>
+    <url-pattern>/addinventorypage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterd</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterd</filter-name>
+    <url-pattern>/adminpage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfiltere</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfiltere</filter-name>
+    <url-pattern>/changepassword</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterf</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterf</filter-name>
+    <url-pattern>/changepasswordpage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterg</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterg</filter-name>
+    <url-pattern>/createmanager</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterh</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterh</filter-name>
+    <url-pattern>/createmanagerpage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilteri</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilteri</filter-name>
+    <url-pattern>/Inventory</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterj</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterj</filter-name>
+    <url-pattern>/Logout</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterk</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterk</filter-name>
+    <url-pattern>/removeinventory</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterl</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterl</filter-name>
+    <url-pattern>/removemanager</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminfilterm</filter-name>
+    <filter-class>com.pavi.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminfilterm</filter-name>
+    <url-pattern>/removemanagerpage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfiltera</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfiltera</filter-name>
+    <url-pattern>/addinventory</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfilterb</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfilterb</filter-name>
+    <url-pattern>/addinventorympage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfilterc</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfilterc</filter-name>
+    <url-pattern>/managerpage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfilterd</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfilterd</filter-name>
+    <url-pattern>/changepassword</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfiltere</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfiltere</filter-name>
+    <url-pattern>/changepasswordmanagerpage</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfilterf</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfilterf</filter-name>
+    <url-pattern>/InnventoryM</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfilterg</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfilterg</filter-name>
+    <url-pattern>/removeinventory</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>managerfilterh</filter-name>
+    <filter-class>com.pavi.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>managerfilterh</filter-name>
+    <url-pattern>/Logout</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfiltera</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfiltera</filter-name>
+    <url-pattern>/addtocart</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterb</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterb</filter-name>
+    <url-pattern>/addtowallet</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterc</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterc</filter-name>
+    <url-pattern>/changepassword</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterd</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterd</filter-name>
+    <url-pattern>/changepasswordcustomerpage</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfiltere</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfiltere</filter-name>
+    <url-pattern>/customerpage</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterf</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterf</filter-name>
+    <url-pattern>/products</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterg</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterg</filter-name>
+    <url-pattern>/purchase</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterh</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterh</filter-name>
+    <url-pattern>/viewcart</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilteri</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilteri</filter-name>
+    <url-pattern>/ViewPurchaseHistory</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterj</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterj</filter-name>
+    <url-pattern>/removefromcart</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterk</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterk</filter-name>
+    <url-pattern>/WalletBal</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterl</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterl</filter-name>
+    <url-pattern>/WalletPage</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>customerfilterm</filter-name>
+    <filter-class>com.pavi.CustomerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>customerfilterm</filter-name>
+    <url-pattern>/Logout</url-pattern>
+  </filter-mapping>
 </web-app>

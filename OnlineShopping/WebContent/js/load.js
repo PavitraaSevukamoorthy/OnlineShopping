@@ -1,4 +1,3 @@
-
 function login(){
 	event.preventDefault();
 	const request = new XMLHttpRequest();
