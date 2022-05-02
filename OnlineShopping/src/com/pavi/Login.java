@@ -3,6 +3,8 @@ package com.pavi;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+import java.util.Base64;
+import java.util.Base64.Encoder;
 import java.util.Random;
 
 import javax.servlet.RequestDispatcher;
@@ -57,7 +59,9 @@ public class Login extends HttpServlet {
 						for(int i=0; i<16; i++) {
 							num += Integer.toString(number.nextInt(9));
 						}
-						Cookie cookie = new Cookie("OS_key",num);
+						Encoder encoder = Base64.getEncoder();
+						String encoded_num = encoder.encodeToString(num.getBytes());
+						Cookie cookie = new Cookie("OS_key",encoded_num);
 						cookie.setMaxAge(60*55);
 						response.addCookie(cookie);
 						PreparedStatement s = conn.prepareStatement("UPDATE log_in SET OS_KEY = ? where  Username_Or_email = ?");
@@ -76,7 +80,9 @@ public class Login extends HttpServlet {
 						for(int i=0; i<16; i++) {
 							num += Integer.toString(number.nextInt(9));
 						}
-						Cookie cookie = new Cookie("OS_key",num);
+						Encoder encoder = Base64.getEncoder();
+						String encoded_num = encoder.encodeToString(num.getBytes());
+						Cookie cookie = new Cookie("OS_key",encoded_num);
 						cookie.setMaxAge(60*55);
 						response.addCookie(cookie);
 						PreparedStatement s = conn.prepareStatement("UPDATE log_in SET OS_KEY = ? where  Username_Or_email = ?");
@@ -95,7 +101,9 @@ public class Login extends HttpServlet {
 						for(int i=0; i<16; i++) {
 							num += Integer.toString(number.nextInt(9));
 						}
-						Cookie cookie = new Cookie("OS_key",num);
+						Encoder encoder = Base64.getEncoder();
+						String encoded_num = encoder.encodeToString(num.getBytes());
+						Cookie cookie = new Cookie("OS_key",encoded_num);
 						cookie.setMaxAge(60*55);
 						response.addCookie(cookie);
 						PreparedStatement s = conn.prepareStatement("UPDATE log_in SET OS_KEY = ? where  Username_Or_email = ?");
