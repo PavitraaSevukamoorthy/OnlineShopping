@@ -34,6 +34,7 @@ import javax.servlet.http.HttpSession;
 //				"Logout"
 //		})
 
+
 public class ManagerFilter implements Filter {
 	public static Connection getconnection() {
 		Connection conn = null;

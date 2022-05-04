@@ -39,7 +39,6 @@ import javax.servlet.http.HttpSession;
 //				"WalletPage"
 //		})
 
-
 public class CustomerFilter implements Filter {
 
 	public static Connection getconnection() {
