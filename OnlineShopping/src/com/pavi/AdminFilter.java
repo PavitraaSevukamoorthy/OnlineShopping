@@ -43,6 +43,7 @@ import javax.servlet.http.HttpSession;
 //				"ViewManager"
 //		})
 
+
 public class AdminFilter implements Filter {
 	public static Connection getconnection() {
 		Connection conn = null;
